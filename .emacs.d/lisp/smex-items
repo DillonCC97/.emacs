@@ -1,0 +1,22 @@
+
+;; ----- smex-history -----
+(
+ eval-defun
+ highlight-symbol-mode
+ package-install
+ auto-highlight-symbol-mode
+ idle-highlight-mode
+ 2048-game
+ package-refresh-contents
+)
+
+;; ----- smex-data -----
+(
+ (package-install . 8)
+ (package-refresh-contents . 1)
+ (2048-game . 1)
+ (idle-highlight-mode . 2)
+ (auto-highlight-symbol-mode . 1)
+ (highlight-symbol-mode . 2)
+ (eval-defun . 3)
+)
