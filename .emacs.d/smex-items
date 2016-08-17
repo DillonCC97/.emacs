@@ -1,16 +1,21 @@
 
 ;; ----- smex-history -----
 (
+ package-list-packages
+ package-install
+ butterfly
+ package-refresh-contents
+ compile
  open-line
  cd
- 5x5
- arp
- dbx
- dig
- erc
 )
 
 ;; ----- smex-data -----
 (
  (open-line . 2)
+ (compile . 3)
+ (package-refresh-contents . 1)
+ (package-install . 4)
+ (butterfly . 1)
+ (package-list-packages . 2)
 )

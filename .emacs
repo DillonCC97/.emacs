@@ -35,14 +35,15 @@
 (global-set-key "\C-o" 'forward-word);
 (global-set-key "\C-h" 'backward-delete-char-untabify);
 (global-set-key "\C-x\C-m" 'not-modified);
-(global-set-key (kbd "M-x") 'smex)
+(global-set-key "\C-g" 'next-error);
+(global-set-key (kbd "M-x") 'smex);
 (setq make-backup-files 'nil);
-(setq default-major-mode 'text-mode)
-(setq text-mode-hook 'turn-on-auto-fill)
-(set-default-font "-misc-fixed-medium-r-normal--15-140-*-*-c-*-*-1")
-(setq auto-mode-alist (cons '("\\.cxx$" . c++-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.hpp$" . c++-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.tex$" . latex-mode) auto-mode-alist))
+(setq default-major-mode 'text-mode);
+(setq text-mode-hook 'turn-on-auto-fill);
+(set-default-font "-misc-fixed-medium-r-normal--15-140-*-*-c-*-*-1");
+(setq auto-mode-alist (cons '("\\.cxx$" . c++-mode) auto-mode-alist));
+(setq auto-mode-alist (cons '("\\.hpp$" . c++-mode) auto-mode-alist));
+(setq auto-mode-alist (cons '("\\.tex$" . latex-mode) auto-mode-alist));
 
 ;(require 'font-lock)
 ;(add-hook 'c-mode-hook 'turn-on-font-lock)
@@ -69,8 +70,9 @@
 
 (package-initialize)
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(package-refresh-contents)
+             '("melpa" . "https://stable.melpa.org/packages/") t)
+(when (not package-archive-contents)
+    (package-refresh-contents))
 
 (load-theme 'dark-blu)
 
@@ -198,4 +200,21 @@
 (package-install 'color-identifiers-mode)
 (add-hook 'after-init-hook 'global-color-identifiers-mode)
 
-;TODO look into packages: 
+(add-hook 'text-mode-hook 'flyspell-mode)
+
+;(setq auto-mode-alist
+      ;(append
+       ;; File name (within directory) starts with a dot.
+       ;'(("/\\.[^/]*\\'" . fundamental-mode)
+         ;; File name has no dot.
+         ;'(("/[^\\./]*\\'" . fundamental-mode)
+         ;; File name ends in ‘.C’.
+         ;("\\.C\\'" . c++-mode))
+          ;auto-mode-alist))
+
+
+
+;TODO look into packages: flycheck, semantic, rtags, cmake-ide
+
+;(require 'rtags) ;; optional, must have rtags installed
+;(cmake-ide-setup)
