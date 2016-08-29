@@ -102,7 +102,7 @@
 (defun insert-tab-char ()
   "insert a tab char. (ASCII 9, \t)"
   (interactive)
-  (insert "\s\s\s\s")
+  (insert "\s\s")
   ;(insert "\t") ;change tab to tab
 )
 
@@ -136,6 +136,7 @@
 
 ;;AutoComplete
 (add-to-list 'load-path "~/.emacs.d/lisp")    ; This may not be appeared if you have already added
+(ac-config-default)
 
 ;;line highlighting
 (global-hl-line-mode 1)
@@ -202,6 +203,27 @@
 
 (add-hook 'text-mode-hook 'flyspell-mode)
 
+(setq-default abbrev-mode 0)
+
+(add-hook 'c++-mode-hook
+  (lambda ()
+    ;;(flyspell-prog-mode)
+    (flycheck-mode)
+    (require 'rtags) ;; optional, must have rtags installed
+    ;;(cmake-ide-setup)
+    (auto-complete-mode 1)
+    ; ...
+))
+
+(add-hook 'python-mode-hook
+  (lambda ()
+    (flyspell-prog-mode)
+    (auto-complete-mode 1)
+    ; ...
+    ))
+
+
+
 ;(setq auto-mode-alist
       ;(append
        ;; File name (within directory) starts with a dot.
@@ -218,3 +240,4 @@
 
 ;(require 'rtags) ;; optional, must have rtags installed
 ;(cmake-ide-setup)
+(flyspell-prog-mode)

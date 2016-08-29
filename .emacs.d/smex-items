@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
- package-list-packages
+ abbrev-mode
+ auto-complete-mode
+ global-auto-complete-mode
  package-install
- butterfly
- package-refresh-contents
- compile
- open-line
- cd
+ mark-page
+ goto-line
+ indent-region
 )
 
 ;; ----- smex-data -----
@@ -15,7 +15,18 @@
  (open-line . 2)
  (compile . 3)
  (package-refresh-contents . 1)
- (package-install . 4)
+ (package-install . 12)
  (butterfly . 1)
- (package-list-packages . 2)
+ (package-list-packages . 5)
+ (line-number-mode . 2)
+ (doctor . 1)
+ (hanoi . 2)
+ (indent-to . 1)
+ (indent-region . 1)
+ (goto-line . 1)
+ (select-all-tabify . 1)
+ (mark-page . 1)
+ (global-auto-complete-mode . 1)
+ (auto-complete-mode . 1)
+ (abbrev-mode . 1)
 )

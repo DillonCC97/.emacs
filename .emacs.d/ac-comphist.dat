@@ -1,0 +1,44 @@
+((("ofstream" .
+   [1 0 0 1 0 0 0 0])
+  ("writer" .
+   [2 0 0 0 0 0])
+  ("getFactorial" .
+   [2 0 0 0 0 0 0 0 0 0 0 0])
+  ("thirdNum" .
+   [0 0 0 0 0 0 1 0])
+  ("nameInput" .
+   [3 0 0 0 0 0 0 0 0])
+  ("cout" .
+   [7 0 0 0])
+  ("lotteryNumVect" .
+   [1 0 0 0 0 0 0 0 0 0 0 1 0 4])
+  ("endl" .
+   [5 0 0 1])
+  ("back" .
+   [1 0 0 0])
+  ("empty" .
+   [1 0 0 0 0])
+  ("size" .
+   [1 0 0 0])
+  ("flycheck" .
+   [1 0 0 0 0 0 0 0])
+  ("flycheck-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("length" .
+   [4 0 0 0 0 1])
+  ("getline" .
+   [1 0 0 0 0 0 0])
+  ("ageInputInt" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("beacon-mode" .
+   [0 0 0 0 0 0 0 0 1 0 0])
+  ("secondNum" .
+   [2 0 0 0 0 0 0 0 0])
+  ("combinedValue" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("reader" .
+   [7 0 0 0 0 0])
+  ("letter" .
+   [2 0 0 0 0 0])
+  ("close" .
+   [1 0 0 0 0])))
