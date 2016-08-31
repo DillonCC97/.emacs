@@ -45,25 +45,25 @@
 (setq auto-mode-alist (cons '("\\.hpp$" . c++-mode) auto-mode-alist));
 (setq auto-mode-alist (cons '("\\.tex$" . latex-mode) auto-mode-alist));
 
-;(require 'font-lock)
-;(add-hook 'c-mode-hook 'turn-on-font-lock)
-;(add-hook 'c++-mode-hook 'turn-on-font-lock)
+                                        ;(require 'font-lock)
+                                        ;(add-hook 'c-mode-hook 'turn-on-font-lock)
+                                        ;(add-hook 'c++-mode-hook 'turn-on-font-lock)
 
-;(defun my-c-mode-hook () 
-;  (linum-mode 1)) 
-;(add-hook 'c-mode-hook 'my-c-mode-hook) 
+                                        ;(defun my-c-mode-hook () 
+                                        ;  (linum-mode 1)) 
+                                        ;(add-hook 'c-mode-hook 'my-c-mode-hook) 
 
-;(defun my-python-mode-hook () 
-;  (linum-mode 1)) 
-;(add-hook 'python-mode-hook 'my-python-mode-hook) 
+                                        ;(defun my-python-mode-hook () 
+                                        ;  (linum-mode 1)) 
+                                        ;(add-hook 'python-mode-hook 'my-python-mode-hook) 
 
-;(when (>= emacs-major-version 24)
-;  (require 'package)
-;  (add-to-list
-;   'package-archives
-;   '("melpa" . "http://melpa.org/packages/")
-;   t)
-;  (package-initialize))
+                                        ;(when (>= emacs-major-version 24)
+                                        ;  (require 'package)
+                                        ;  (add-to-list
+                                        ;   'package-archives
+                                        ;   '("melpa" . "http://melpa.org/packages/")
+                                        ;   t)
+                                        ;  (package-initialize))
 
 (require 'package)
 (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
@@ -72,7 +72,7 @@
 (add-to-list 'package-archives
              '("melpa" . "https://stable.melpa.org/packages/") t)
 (when (not package-archive-contents)
-    (package-refresh-contents))
+  (package-refresh-contents))
 
 (load-theme 'dark-blu)
 
@@ -85,7 +85,7 @@
 (set-face-foreground 'mode-line nil)
 (set-face-background 'mode-line "#333333")
 (set-face-background 'mode-line-inactive "5d6687")
-;(set-face-background 'mode-line-inactive "#1f222d")
+                                        ;(set-face-background 'mode-line-inactive "#1f222d")
 
 ;; enter key indents to previous line
 
@@ -103,8 +103,8 @@
   "insert a tab char. (ASCII 9, \t)"
   (interactive)
   (insert "\s\s")
-  ;(insert "\t") ;change tab to tab
-)
+                                        ;(insert "\t") ;change tab to tab
+  )
 
 (global-set-key (kbd "RET") 'newline-and-indent)
 
@@ -112,25 +112,25 @@
 ;; home now goes to first character that isnt whitespace
 (global-set-key (kbd "C-a") 'back-to-indentation)
 
-;(defvar my-offset 4 "My indentation offset. ")
-;(defun backspace-whitespace-to-tab-stop ()
-;    "Delete whitespace backwards to the next tab-stop, otherwise delete one character."
-;      (interactive)
-;       (if (or indent-tabs-mode
-;		          (region-active-p)
-;			            (save-excursion
-;				                  (> (point) (progn (back-to-indentation)
-;								                             ;     (point)))))
-;	          (call-interactively 'backward-delete-char-untabify)
-;	      (let ((movement (% (current-column) my-offset))
-;		              (p (point)))
-;		      (when (= movement 0) (setq movement my-offset))
-;		            ;; Account for edge case near beginning of buffer
-;		            (setq movement (min (- p 1) movement))
-;			          (save-match-data
-;				            (if (string-match "[^\t ]*\\([\t ]+\\)$" (buffer-;substring-no-properties (- p movement) p))
-;						            (backward-delete-char (- (match-end 1) (match-beginning 1)))
-;					                (call-interactively 'backward-delete-char))))))
+                                        ;(defvar my-offset 4 "My indentation offset. ")
+                                        ;(defun backspace-whitespace-to-tab-stop ()
+                                        ;    "Delete whitespace backwards to the next tab-stop, otherwise delete one character."
+                                        ;      (interactive)
+                                        ;       (if (or indent-tabs-mode
+                                        ;		          (region-active-p)
+                                        ;			            (save-excursion
+                                        ;				                  (> (point) (progn (back-to-indentation)
+                                        ;								                             ;     (point)))))
+                                        ;	          (call-interactively 'backward-delete-char-untabify)
+                                        ;	      (let ((movement (% (current-column) my-offset))
+                                        ;		              (p (point)))
+                                        ;		      (when (= movement 0) (setq movement my-offset))
+                                        ;		            ;; Account for edge case near beginning of buffer
+                                        ;		            (setq movement (min (- p 1) movement))
+                                        ;			          (save-match-data
+                                        ;				            (if (string-match "[^\t ]*\\([\t ]+\\)$" (buffer-;substring-no-properties (- p movement) p))
+                                        ;						            (backward-delete-char (- (match-end 1) (match-beginning 1)))
+                                        ;					                (call-interactively 'backward-delete-char))))))
 (setq backward-delete-char-untabify-method 'hungry)
 (global-set-key (kbd "DEL") 'backward-delete-char-untabify)
 
@@ -151,8 +151,8 @@
 
 ;;skip startup
 (setq inhibit-splash-screen t
-            initial-scratch-message nil
-	          initial-major-mode 'org-mode)
+      initial-scratch-message nil
+      initial-major-mode 'org-mode)
 
 ;;disable bars
 (scroll-bar-mode -1)
@@ -161,8 +161,8 @@
 
 ;;misc
 (setq echo-keystrokes 0.1
-            use-dialog-box nil
-	          visible-bell t)
+      use-dialog-box nil
+      visible-bell t)
 (show-paren-mode t)
 
 (package-initialize)
@@ -170,7 +170,7 @@
 
 (setq linum-format "%d ")
 
-    ;; scroll one line at a time (less "jumpy" than defaults)
+;; scroll one line at a time (less "jumpy" than defaults)
 
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
 
@@ -180,15 +180,15 @@
 
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 
-(defun select-all-tabify ()
+(defun indent-buffer ()
   (interactive)
-  (lambda ()
-  (mark-whole-buffer)
-  (tabify)))
+  (save-excursion
+    (indent-region (point-min) (point-max) nil)))
+(global-set-key [f12] 'indent-buffer)
 
 (global-set-key (kbd "C-c t") 'select-all-tabify)
 
-;(xclip-mode 1)
+                                        ;(xclip-mode 1)
 
 (ido-mode 1)
 (ido-everywhere 1)
@@ -206,38 +206,38 @@
 (setq-default abbrev-mode 0)
 
 (add-hook 'c++-mode-hook
-  (lambda ()
-    ;;(flyspell-prog-mode)
-    (flycheck-mode)
-    (require 'rtags) ;; optional, must have rtags installed
-    ;;(cmake-ide-setup)
-    (auto-complete-mode 1)
-    ; ...
-))
+          (lambda ()
+            ;;(flyspell-prog-mode)
+            (flycheck-mode)
+            (require 'rtags) ;; optional, must have rtags installed
+            ;;(cmake-ide-setup)
+            (auto-complete-mode 1)
+                                        ; ...
+            ))
 
 (add-hook 'python-mode-hook
-  (lambda ()
-    (flyspell-prog-mode)
-    (auto-complete-mode 1)
-    ; ...
-    ))
+          (lambda ()
+            (flyspell-prog-mode)
+            (auto-complete-mode 1)
+                                        ; ...
+            ))
 
 
 
-;(setq auto-mode-alist
-      ;(append
-       ;; File name (within directory) starts with a dot.
-       ;'(("/\\.[^/]*\\'" . fundamental-mode)
-         ;; File name has no dot.
-         ;'(("/[^\\./]*\\'" . fundamental-mode)
-         ;; File name ends in ‘.C’.
-         ;("\\.C\\'" . c++-mode))
-          ;auto-mode-alist))
+                                        ;(setq auto-mode-alist
+                                        ;(append
+;; File name (within directory) starts with a dot.
+                                        ;'(("/\\.[^/]*\\'" . fundamental-mode)
+;; File name has no dot.
+                                        ;'(("/[^\\./]*\\'" . fundamental-mode)
+;; File name ends in ‘.C’.
+                                        ;("\\.C\\'" . c++-mode))
+                                        ;auto-mode-alist))
 
 
 
-;TODO look into packages: flycheck, semantic, rtags, cmake-ide
+                                        ;TODO look into packages: flycheck, semantic, rtags, cmake-ide
 
-;(require 'rtags) ;; optional, must have rtags installed
-;(cmake-ide-setup)
+                                        ;(require 'rtags) ;; optional, must have rtags installed
+                                        ;(cmake-ide-setup)
 (flyspell-prog-mode)
