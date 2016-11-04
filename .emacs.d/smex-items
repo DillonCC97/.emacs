@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ recover-file
+ make-frame
+ new-frame
+ repeat
  package-install
- tabify
- abbrev-mode
- auto-complete-mode
- global-auto-complete-mode
- mark-page
- package-list-packages
+ mark-whole-buffer
+ select-frame
 )
 
 ;; ----- smex-data -----
@@ -15,7 +15,7 @@
  (open-line . 2)
  (compile . 3)
  (package-refresh-contents . 1)
- (package-install . 13)
+ (package-install . 14)
  (butterfly . 1)
  (package-list-packages . 5)
  (line-number-mode . 2)
@@ -31,4 +31,12 @@
  (abbrev-mode . 1)
  (tabify . 1)
  (dka-fix-comments . 1)
+ (delete-trailing-whitespace . 1)
+ (write-file . 9)
+ (select-frame . 1)
+ (mark-whole-buffer . 2)
+ (repeat . 1)
+ (new-frame . 1)
+ (make-frame . 1)
+ (recover-file . 2)
 )

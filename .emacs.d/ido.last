@@ -1,0 +1,52 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/dillon/Code/bitbucket/" . "ufpt/")
+ ("/home/dillon/" . "Code/")
+ ("/home/dillon/Code/github/codeeval/" . "digitsum/")
+ ("/home/dillon/Code/github/" . "codeeval/")
+ ("/home/dillon/Code/" . "bitbucket/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ 
+)
+
+;; ----- ido-work-file-list -----
+(
+ 
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/dillon/Code/bitbucket/cpp-class/pa2/" (22541 23755 580047 562000) "#LinkedList.cpp#" "#LinkedList.h#" "../" "pa2.cpp" "./" ".#LinkedList.h" "LinkedList.cpp" "LinkedList.h")
+
+ ("/home/dillon/Code/bitbucket/ufpt/" (22494 43705 507532 116000) ".#template.py3" "../" "./" "template.py3")
+
+ ("/home/dillon/Code/bitbucket/" (22494 43589 257525 719000) "ufpt/" "../" "cpp-class/" "./" "order-program/" "sticker-program/" "py-combocrypt/")
+
+ ("/home/dillon/" (22494 43551 297523 633000) "Code/" ".config/" ".gnome/" ".Xmodmap" ".themes/" ".bash_logout" "Desktop/" ".lyrics/" ".mpd/" "../" ".dbus/" ".toggle_system_tray" "mail/" ".Xauthority" ".imgur-screenshot.log" ".pinerc" ".bash_history" ".bashrc" ".mozilla/" ".macromedia/" "./" ".wicd/" ".gitconfig" ".emacs.d/" ".fehbg" ".xdg_menu_cache/" ".aspell.en.pws" ".pine-debug3" "Documents/" "Templates/" "Public/" ".xinitrc" ".pki/" ".ncmpcpp/" ".pine-debug4" ".adobe/" ".cache/" ".xsession-errors" ".local/" ".pine-debug1" ".git/" "Backgrounds/" ".emacs" ".openbox_startup.log" ".thumbnails/" ".bash_profile" ".python_history" ".gnupg/" ".mate-startup" ".pine-debug2" "Pictures/" ".gtkrc-2.0" ".i3/" ".icons/" "Downloads/" ".lastpass/" "Music/" "Videos/" ".aspell.en.prepl" ".thunderbird/" ".hardinfo/")
+
+ ("/home/dillon/Code/github/codeeval/mth/" (22492 9527 346788 228000) "../" "./")
+
+ ("/home/dillon/Code/github/codeeval/" (22492 9527 346788 228000) "reversewords/" "sumprimes/" "lowercase/" "../" "./" "primepalindrome/" "template.py3" "README.md" "fizzbuzz/" ".git/" "digitsum/" "mth/" "mincoins/")
+
+ ("/home/dillon/Code/github/codeeval/mincoins/" (22490 54386 646788 57000) "../" "input.txt" "./")
+
+ ("/home/dillon/Code/github/codeeval/digitsum/" (22490 50201 760137 388000) "../" "./")
+
+ ("/home/dillon/Code/github/codeeval/lowercase/" (22490 49810 373469 400000) "../" "./")
+
+ ("/home/dillon/Code/github/codeeval/reversewords/" (22490 48699 950132 318000) "../" "./")
+
+ ("/home/dillon/Code/" (22448 64941 778982 617000) "../" "./" "bitbucket/" "github/")
+
+ ("/home/dillon/Code/github/" (22489 13557 380340 756000) "codeeval/" "../" "./" "Firefox-Config/" "dilloncc97.github.io/" ".i3/")
+
+ ("/home/dillon/Code/github/codeeval/primepalindrome/" (22489 26732 73689 409000) "../" "./" "primepalindrome.py3")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

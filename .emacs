@@ -7,6 +7,9 @@
  '(custom-safe-themes
    (quote
     ("190565308dd27485b4275ae5deb1af1e798e9de351216e93518bcf7b53783411" default)))
+ '(package-selected-packages
+   (quote
+    (xclip w3m sublimity smex smartparens rtags minimap ido-ubiquitous idle-highlight-mode idea-darkula-theme highlight-symbol flycheck elpy color-identifiers-mode cmake-ide centered-cursor-mode better-defaults auto-highlight-symbol auto-complete afternoon-theme 2048-game)))
  '(word-wrap nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -102,7 +105,7 @@
 (defun insert-tab-char ()
   "insert a tab char. (ASCII 9, \t)"
   (interactive)
-  (insert "\s\s")
+  (insert "\s\s\s\s")
                                         ;(insert "\t") ;change tab to tab
   )
 
@@ -138,6 +141,7 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")    ; This may not be appeared if you have already added
 (ac-config-default)
 
+
 ;;line highlighting
 (global-hl-line-mode 1)
 
@@ -166,7 +170,6 @@
 (show-paren-mode t)
 
 (package-initialize)
-(elpy-enable)
 
 (setq linum-format "%d ")
 
@@ -219,6 +222,7 @@
           (lambda ()
             (flyspell-prog-mode)
             (auto-complete-mode 1)
+            (elpy-enable)
                                         ; ...
             ))
 
